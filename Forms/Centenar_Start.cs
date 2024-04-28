@@ -1,4 +1,5 @@
 ﻿using CentenarMareaUnire.DataAccess;
+using CentenarMareaUnire.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace CentenarMareaUnire.Forms
     public partial class Centenar_Start : Form
     {
         bool logat = false;
+        UserModel user;
         public Centenar_Start()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace CentenarMareaUnire.Forms
             centenarLogare.ShowDialog();
             this.Show();
             logat = centenarLogare.logat;
-            if(logat) { buttonCreate.Visible = buttonGhiceste.Visible = buttonTraseu.Visible = true; }
+            if(logat) { buttonCreate.Visible = buttonGhiceste.Visible = buttonTraseu.Visible = true; user = centenarLogare.user; }
         }
 
         private void buttonVizualizare_Click(object sender, EventArgs e)
@@ -41,6 +43,37 @@ namespace CentenarMareaUnire.Forms
             vizualizare.ShowDialog();
             this.Show();
 
+        }
+
+        private void buttonCreate_Click(object sender, EventArgs e)
+        {
+            CreareLectie creare = new CreareLectie();
+            this.Hide();
+            creare.user = user;
+            creare.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonGhiceste_Click(object sender, EventArgs e)
+        {
+            GhicesteRegiunea ghicesteRegiunea = new GhicesteRegiunea();
+            this.Hide();
+            ghicesteRegiunea.user = user;
+            ghicesteRegiunea.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonTraseu_Click(object sender, EventArgs e)
+        {
+            GenereazaTraseu genereazaTraseu = new GenereazaTraseu();
+            this.Hide();
+            genereazaTraseu.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

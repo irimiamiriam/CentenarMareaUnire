@@ -224,5 +224,26 @@ namespace CentenarMareaUnire.DataAccess
             }
             return userGasit;
         }
+
+        internal static void AddLectie(LectieModel lectie)
+        {
+            using (SqlConnection con = new SqlConnection(_connectionstring))
+            {
+                con.Open();
+                string cmdText = "Insert into Lectii (IdUtilizator, TitluLectie, Regiune, DataCreare, NumeImagine) values (@id, @titlu, @reg, @data,@nume)";
+               using( SqlCommand cmd= new SqlCommand(cmdText, con))
+                {
+                    cmd.Parameters.AddWithValue("@id", lectie.IdUtilizator);
+                    cmd.Parameters.AddWithValue("@titlu", lectie.Titlu);
+                    cmd.Parameters.AddWithValue("@reg", lectie.Regiune);
+                    cmd.Parameters.AddWithValue("@data", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@nume", lectie.File);
+                    cmd.ExecuteNonQuery();
+
+                }
+
+            }
+
+            }
     }
 }

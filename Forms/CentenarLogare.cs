@@ -18,6 +18,7 @@ namespace CentenarMareaUnire.Forms
         public bool logat = false;
         List<string> selectedImages = new List<string>();
         List<string> oameniCaptcha = new List<string>();
+        public UserModel user;
         UserModel userEmail;
         public CentenarLogare()
         {
@@ -26,13 +27,14 @@ namespace CentenarMareaUnire.Forms
 
         private void buttonLogare_Click(object sender, EventArgs e)
         {
-            UserModel user = new UserModel();
+            user = new UserModel();
             user.Email= textBoxEmail.Text;
             user.Parola= textBoxParola.Text;
             user = DatabaseHelper.FindUser(user);
             if (user.Nume != null)
             {
                 logat = true;
+               
                 this.Close();
             }
             else
@@ -140,6 +142,11 @@ namespace CentenarMareaUnire.Forms
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void CentenarLogare_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

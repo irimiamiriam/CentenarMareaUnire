@@ -33,6 +33,7 @@
             this.buttonCreate = new System.Windows.Forms.Button();
             this.buttonGhiceste = new System.Windows.Forms.Button();
             this.buttonTraseu = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonLogare
@@ -70,6 +71,7 @@
             this.buttonCreate.Text = "Creare lectie";
             this.buttonCreate.UseVisualStyleBackColor = false;
             this.buttonCreate.Visible = false;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // buttonGhiceste
             // 
@@ -82,6 +84,7 @@
             this.buttonGhiceste.Text = "Ghiceste regiunea";
             this.buttonGhiceste.UseVisualStyleBackColor = false;
             this.buttonGhiceste.Visible = false;
+            this.buttonGhiceste.Click += new System.EventHandler(this.buttonGhiceste_Click);
             // 
             // buttonTraseu
             // 
@@ -94,13 +97,27 @@
             this.buttonTraseu.Text = "Generare Traseu";
             this.buttonTraseu.UseVisualStyleBackColor = false;
             this.buttonTraseu.Visible = false;
+            this.buttonTraseu.Click += new System.EventHandler(this.buttonTraseu_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.SandyBrown;
+            this.buttonExit.Font = new System.Drawing.Font("Poor Richard", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Location = new System.Drawing.Point(365, 393);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(321, 46);
+            this.buttonExit.TabIndex = 5;
+            this.buttonExit.Text = "Iesire";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // Centenar_Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(1041, 384);
+            this.ClientSize = new System.Drawing.Size(1051, 451);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonTraseu);
             this.Controls.Add(this.buttonGhiceste);
             this.Controls.Add(this.buttonCreate);
@@ -120,5 +137,6 @@
         private System.Windows.Forms.Button buttonCreate;
         private System.Windows.Forms.Button buttonGhiceste;
         private System.Windows.Forms.Button buttonTraseu;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

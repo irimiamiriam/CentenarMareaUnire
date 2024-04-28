@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -60,6 +61,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\DataAccess.cs" />
@@ -76,12 +78,37 @@
     <Compile Include="Forms\Centenar_Start.Designer.cs">
       <DependentUpon>Centenar_Start.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CreareLectie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreareLectie.Designer.cs">
+      <DependentUpon>CreareLectie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Diploma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Diploma.Designer.cs">
+      <DependentUpon>Diploma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GenereazaTraseu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GenereazaTraseu.Designer.cs">
+      <DependentUpon>GenereazaTraseu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GhicesteRegiunea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GhicesteRegiunea.Designer.cs">
+      <DependentUpon>GhicesteRegiunea.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\VizualizareLectii.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\VizualizareLectii.Designer.cs">
       <DependentUpon>VizualizareLectii.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CapitalaModel.cs" />
     <Compile Include="Models\LectieModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Program.cs" />
@@ -91,6 +118,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Centenar_Start.resx">
       <DependentUpon>Centenar_Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreareLectie.resx">
+      <DependentUpon>CreareLectie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Diploma.resx">
+      <DependentUpon>Diploma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GenereazaTraseu.resx">
+      <DependentUpon>GenereazaTraseu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GhicesteRegiunea.resx">
+      <DependentUpon>GhicesteRegiunea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VizualizareLectii.resx">
       <DependentUpon>VizualizareLectii.cs</DependentUpon>
